@@ -1,0 +1,103 @@
+body {
+    text-align: center;
+    background: #7B1818;
+    font-family: 'Rubik', Tahoma, Geneva, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+    grid-template-columns:auto;
+    grid-template-areas:
+        "head"
+        "main"
+        "foot";
+
+}
+
+header{
+    grid-area: head;
+}
+
+main{
+    grid-area: main;
+}
+
+/*TITTLE*/
+h1{
+    text-transform: Uppercase;
+    color: pink;
+    margin-left: 60px;
+    margin-right:60px;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+p{
+    color:pink;
+    margin-bottom: 30px;
+}
+
+#tittle {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+
+#tittle:hover {
+    animation: jump 1s infinite;
+  }
+
+@keyframes jump 
+{
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-30px); }
+    50% { transform: translateY(0); }
+    70% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/*MAIN LAY-OUT*/
+.container
+{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+#boardMain
+{
+    background-image: url("./art/white.png");
+    opacity:0.2;
+    height: 450px;
+    width: 450px;
+}
+
+#boardChar
+{
+    box-sizing:border-box;
+    background-color: lightpink;
+    
+}
+
+/*canvas
+{
+    width:80%;
+    height:auto;
+}*/
+
+@media (min-width:600px)
+{
+    .classMain
+    {
+        width:70%;
+    }
+    .classChar
+    {
+        width:30%;
+    }
+}
+
+@media (max-width:599px)
+{
+    .game
+    {
+        width:100%;
+    }
+}
